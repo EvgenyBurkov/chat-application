@@ -1,0 +1,7 @@
+@import './styles/mixins';
+
+.chatApp {
+  @include flex(row, '', '');
+  height: 100vh;
+  min-height: 570px;
+}

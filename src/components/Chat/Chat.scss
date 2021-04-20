@@ -1,0 +1,15 @@
+@import '~antd/dist/antd.css';
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import '../../styles/mixins';
+
+.chat {
+    @include flex(column, '', center);
+    color: black;
+
+    .empty .text {
+        margin: 0 8px;
+        font-size: 14px;
+        line-height: 1.5715;
+        text-align: center;
+    }
+}

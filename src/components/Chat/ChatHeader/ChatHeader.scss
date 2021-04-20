@@ -1,0 +1,52 @@
+@import '../../../styles/mixins';
+
+.chatHeader {
+    justify-content: space-between;
+    padding: 30px 20px 20px;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.24);
+    @include flex(row, center, '');
+
+    .icon {
+        font-size: 17px;
+        display: block;
+        cursor: pointer;
+
+        &:hover, &.added {
+            color: orange;
+        }
+
+        &-control {
+            font-size: 20px;
+        }
+    }
+  
+    .wrapper {
+        @include flex(row, center, '');
+      
+        & > :not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+  
+    .channelTitle {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+    }
+  
+    .meta {
+        @include flex('', center, '');
+  
+        :not(:last-child) {
+            margin-right: 25px;
+        }
+  
+        .chatMembers {
+            @include flex(row, center, '');
+            
+            :first-child {
+                margin-right: 2px;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import '../../../styles/mixins';
+
+.users {
+    margin: 20px 26px 16px 26px;
+    @include flex(column, '', '');
+    flex: 1 1 auto;
+    height: 40%;
+    width: 229px;
+
+    > div {
+        margin-bottom:10px;
+    }
+
+    .usersHeader {
+        @include flex(row, '', space-between);
+        font-size: 12px;
+        line-height: 14px;
+        color: #919191;
+    }
+
+    .friendsList {
+        @include flex(column, '', '');
+    
+        & > .item {
+            padding: 5px 10px 5px 15px;
+            margin-right: 15px;
+            @include flex(row, '', space-between);
+
+            & a, & .text {
+                color: #b5b5b5;
+                text-decoration: none;
+            }
+    
+            a:first-child {
+                width: 100%;
+            }
+    
+            .icon {
+                opacity: 1;
+    
+                &.added {
+                    color: #ffffff;
+                    margin-left: 15px;
+                }
+                &.text {
+                    display: none;
+                    margin-left: 5px;
+                }
+            }
+    
+            &:hover, &.open {
+                cursor: pointer;
+                background: rgba($color: #ffffff, $alpha: 0.2);
+                border-radius: 5px;
+        
+                &:hover {
+                    .icon {
+                        display: inline-block;
+                    }
+                }
+        
+                a, .text {
+                    color: #ffffff
+                }
+            }
+        }
+    }
+}
